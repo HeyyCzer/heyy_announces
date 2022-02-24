@@ -1,0 +1,12 @@
+processAnnouncements([
+    {
+		title: "Promoção de Carnaval",
+		description: "Adquira já seu VIP com <b>30% OFF</b>",
+		endTime: 1645735518000
+	},
+    {
+		title: "Promoção de Páscoa",
+		description: "O coelhinho deixou o gerente louco! Adquira já qualquer VIP com <b>50% de desconto</b>!",
+		endTime: 1648154420000
+	},
+]);

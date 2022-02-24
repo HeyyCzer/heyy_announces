@@ -1,0 +1,99 @@
+#admin-menu {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+
+	width: 50vw;
+	height: 80vh;
+	max-width: 500px;
+
+	color: white;
+	background: #121212;
+
+	border-radius: 20px;
+}
+
+#admin-menu h4 {
+	margin: 0;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#admin-menu .title::after {
+	display: block;
+	content: "";
+	width: 120px;
+	height: 4px;
+	background: rgb(255, 111, 111);
+	margin: 0 auto;
+}
+
+#admin-menu .body {
+	margin-top: 20px;
+}
+
+#colorPicker {
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.menu-inputs label {
+	margin-bottom: 10px;
+}
+
+.menu-inputs textarea {
+	background: #202020;
+	color: white;
+	resize: none;
+	border: 0;
+	border-radius: 10px;
+
+	padding: 10px;
+
+	border: 1px solid transparent;
+	font-family: 'Montserrat', sans-serif !important;
+}
+.menu-inputs textarea:focus {
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+	display: block;
+	width: fit-content;
+
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 6px;
+	margin: 25px auto;
+	padding: 0.8em 3em;
+	background-size: 300% 300%;
+	color: white;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+	background-image: linear-gradient(to right, rgb(255, 111, 111) 0%, rgb(130, 0, 0) 50%, rgb(255, 111, 111) 100%);
+	transition: 0.5s ease-out;
+}
+
+.btn:hover {
+	background-position: right center;
+}
+
+#announce-time {
+	border-radius: 10px;
+	border: 0;
+	padding: 10px 8px;
+	font-family: 'Montserrat', sans-serif !important;
+
+	color: white;
+	background: #202020;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

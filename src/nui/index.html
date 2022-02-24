@@ -9,10 +9,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="creator/creatorStyle.css">
 </head>
 <body>
 	<section id="announce-wrapper">
-		<div class="announcement">
+		<!-- <div class="announcement">
 			<div class="announce-title">
 				Promoção de carnaval
 			</div>
@@ -22,14 +23,37 @@
 			<div class="announce-timeout">
 				Restam só <span class="animated-clock">🕐</span> <b>3 dias</b>!
 			</div>
+		</div> -->
+	</section>
+
+	<section id="admin-menu" style="display: none">
+		<div class="title">
+			<h4>Criar novo anúncio</h4>
+		</div>
+		<div class="body" style="margin: 10px 30px 0;">
+			<div class="menu-inputs" style="width: 80%; margin: 0 auto 30px; display: grid;">
+				<label for="text-title">Título</label>
+				<textarea id="text-title"></textarea>
+				<br/>
+				<label for="text-description">Descrição do Anúncio</label>
+				<textarea id="text-description" style="height: 100px;"></textarea>
+			</div>
+			<div style="display: grid; width: fit-content; margin: 0 auto 30px;">
+				<label for="announce-time">Tempo</label>
+				<input type="datetime-local" id="announce-time" name="announce-time">
+			</div>
+			<div id="colorPicker"></div>
+			<div class="menu-buttons">
+				<a href="#" class="btn btn-primary" id="create-announce">
+					Enviar
+				</a>
+			</div>
 		</div>
 	</section>
 
-	<section id="admin-menu">
-
-	</section>
-
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
 	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="creator/creator.js"></script>
 </body>
 </html>
