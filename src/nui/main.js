@@ -1,4 +1,4 @@
-const announceMaxTime = 20000;
+let announceMaxTime = 20000;
 
 $(document).ready(function () {
 	window.addEventListener("message", function (event) {
@@ -10,6 +10,10 @@ $(document).ready(function () {
 
 			case "closeAdminMenu":
 				closeAdminMenu();
+				break;
+			
+			case "setMaxTime":
+				announceMaxTime = item.time * 1000;
 				break;
 			
 			case "showAnnounce":

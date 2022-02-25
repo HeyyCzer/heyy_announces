@@ -8,8 +8,9 @@ local vSERVER = Tunnel.getInterface(GetCurrentResourceName())
 
 Citizen.CreateThread(function()
 	Wait(10000)
+	SendNUIMessage({ action = "setMaxTime", time = Config.renderTime })
 	while true do
-		local idle = 15 * 60 * 1000
+		local idle = Config.verificationTime * 60 * 1000
 		src.renderAnnouncements()
 		Citizen.Wait(idle)
 	end
