@@ -13,6 +13,11 @@ vRP.prepare("heyy_announce/createNew", "INSERT INTO heyy_announces (title, descr
 vRP.prepare("heyy_announce/removeOld", "DELETE FROM heyy_announces WHERE endTime < @endTime")
 
 function src.getCurrentAnnouncements()
+	if GetCurrentResourceName() ~= "heyy_announce" then 
+		print("^1[ERRO]^7", "Você não pode mudar o nome do script!")
+		return 
+	end
+
 	local messages = vRP.query("heyy_announce/getMessages")
 	return messages
 end
@@ -20,15 +25,20 @@ end
 function src.checkPermission()
 	local source = source
 	local user_id = vRP.getUserId(source)
-	return vRP.hasPermission(user_id, "manager.permissao")
+	return vRP.hasPermission(user_id, Config.permission)
 end
 
 function src.addNewAnnounce(announce)
 	local source = source
 	local user_id = vRP.getUserId(source)
-	if not vRP.hasPermission(user_id, "manager.permissao") then
+	if not vRP.hasPermission(user_id, Config.permission) then
 		TriggerClientEvent("Notify",source,"negado","Você não tem permissão para isto.")
 		return false
+	end
+
+	if GetCurrentResourceName() ~= "heyy_announce" then 
+		print("^1[ERRO]^7", "Você não pode mudar o nome do script!")
+		return 
 	end
 
 	vRP.execute("heyy_announce/createNew", announce)
